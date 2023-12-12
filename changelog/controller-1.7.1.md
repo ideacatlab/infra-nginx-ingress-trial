@@ -51,4 +51,4 @@ Images:
 * Bump google.golang.org/grpc from 1.53.0 to 1.54.0 (#9794)
 * Bump sigs.k8s.io/controller-runtime from 0.14.5 to 0.14.6 (#9822)
 
-**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.7.0...controller-controller-v1.7.1
+**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.7.0...controller-controller-v1.7.1

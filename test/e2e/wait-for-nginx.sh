@@ -34,7 +34,7 @@ function on_exit {
     test $error_code == 0 && return;
 
     echo "Obtaining ingress controller pod logs..."
-    kubectl logs -l app.kubernetes.io/name=ingress-nginx -n $NAMESPACE
+    kubectl logs -l app.kubernetes.io/name=infra-nginx-ingress-trial -n $NAMESPACE
 }
 trap on_exit EXIT
 
@@ -61,11 +61,11 @@ fi
 # Use the namespace overlay if it was requested
 if [[ ! -z "$NAMESPACE_OVERLAY" && -d "$DIR/namespace-overlays/$NAMESPACE_OVERLAY" ]]; then
     echo "Namespace overlay $NAMESPACE_OVERLAY is being used for namespace $NAMESPACE"
-    helm install nginx-ingress ${DIR}/charts/ingress-nginx \
+    helm install nginx-ingress ${DIR}/charts/infra-nginx-ingress-trial \
         --namespace=$NAMESPACE \
         --values "$DIR/namespace-overlays/$NAMESPACE_OVERLAY/values.yaml"
 else
-    cat << EOF | helm install nginx-ingress ${DIR}/charts/ingress-nginx --namespace=$NAMESPACE --values -
+    cat << EOF | helm install nginx-ingress ${DIR}/charts/infra-nginx-ingress-trial --namespace=$NAMESPACE --values -
 # TODO: remove the need to use fullnameOverride
 fullnameOverride: nginx-ingress
 controller:

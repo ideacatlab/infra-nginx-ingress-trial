@@ -103,7 +103,7 @@ func getEndpointsFromSlices(s *corev1.Service, port *corev1.ServicePort, proto c
 				}
 				if targetPort == 0 && port.TargetPort.Type == intstr.Int {
 					// use service target port if it's a number and no port name matched
-					// https://github.com/kubernetes/ingress-nginx/issues/7390
+					// https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/7390
 					targetPort = port.TargetPort.IntVal
 				}
 				if targetPort == 0 {

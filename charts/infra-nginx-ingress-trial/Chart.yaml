@@ -1,0 +1,23 @@
+annotations:
+  artifacthub.io/changes: |-
+    - "Update Infra-Nginx-Ingress-Trial version controller-dev"
+  artifacthub.io/prerelease: "false"
+apiVersion: v2
+appVersion: 1.9.4
+description:
+  Ingress controller for Kubernetes using NGINX as a reverse proxy and
+  load balancer
+home: https://github.com/ideacatlab/infra-nginx-ingress-trial
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+keywords:
+  - ingress
+  - nginx
+kubeVersion: ">=1.20.0-0"
+maintainers:
+  - name: rikatz
+  - name: strongjz
+  - name: tao12345666333
+name: infra-nginx-ingress-trial
+sources:
+  - https://github.com/ideacatlab/infra-nginx-ingress-trial
+version: 4.8.4

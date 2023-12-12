@@ -178,7 +178,7 @@ func CreateIngressClass(namespace string, c kubernetes.Interface) (string, error
 				APIGroup:  "",
 				Kind:      "ServiceAccount",
 				Namespace: namespace,
-				Name:      "nginx-ingress",
+				Name:      "infra-nginx-ingress-trial",
 			},
 		},
 	}, metav1.CreateOptions{})

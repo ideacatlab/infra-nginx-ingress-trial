@@ -38,7 +38,7 @@ const (
 	defaultAffinityCookieName = "INGRESSCOOKIE"
 
 	// This is used to force the Secure flag on the cookie even if the
-	// incoming request is not secured. (https://github.com/kubernetes/ingress-nginx/issues/6812)
+	// incoming request is not secured. (https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/6812)
 	annotationAffinityCookieSecure = "session-cookie-secure"
 
 	// This is used to control the cookie expires, its value is a number of seconds until the

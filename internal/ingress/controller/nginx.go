@@ -120,7 +120,7 @@ func NewNGINXController(config *Configuration, mc metric.Collector) *NGINXContro
 			TLSConfig:         ssl.NewTLSListener(n.cfg.ValidationWebhookCertPath, n.cfg.ValidationWebhookKeyPath).TLSConfig(),
 			// disable http/2
 			// https://github.com/kubernetes/kubernetes/issues/80313
-			// https://github.com/kubernetes/ingress-nginx/issues/6323#issuecomment-737239159
+			// https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/6323#issuecomment-737239159
 			TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler)),
 		}
 	}
@@ -739,7 +739,7 @@ func (n *NGINXController) OnUpdate(ingressCfg ingress.Configuration) error {
 // nginxHashBucketSize computes the correct NGINX hash_bucket_size for a hash
 // with the given longest key.
 func nginxHashBucketSize(longestString int) int {
-	// see https://github.com/kubernetes/ingress-nginxs/issues/623 for an explanation
+	// see https://github.com/ideacatlab/infra-nginx-ingress-trials/issues/623 for an explanation
 	wordSize := 8 // Assume 64 bit CPU
 	n := longestString + 2
 	aligned := (n + wordSize - 1) & ^(wordSize - 1)

@@ -11,4 +11,4 @@ Images:
 
 * Cherry pick fcgi fix and release v1.9.4 (#10544)
 
-**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.9.3...controller-controller-v1.9.4
+**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.9.3...controller-controller-v1.9.4

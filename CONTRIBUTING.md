@@ -19,9 +19,9 @@ Follow either of the two links above to access the appropriate CLA and instructi
 
 ## Finding Issues That Need Help
 
-If you're new to the project and want to help, but don't know where to start, we have a semi-curated list of issues that should not need deep knowledge of the system. [Have a look and see if anything sounds interesting](https://github.com/kubernetes/ingress-nginx/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22help+wanted%22).
+If you're new to the project and want to help, but don't know where to start, we have a semi-curated list of issues that should not need deep knowledge of the system. [Have a look and see if anything sounds interesting](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues?utf8=%E2%9C%93&q=is%3Aopen%20is%3Aissue%20label%3A%22help+wanted%22).
 
-Alternatively, search for the label [`triage-accepted`](https://github.com/kubernetes/ingress-nginx/issues?q=is%3Aopen+is%3Aissue+label%3Atriage%2Faccepted+) if you have some experience with ingress-nginx. Note, that it could make sense to grab issues with higher priority first.
+Alternatively, search for the label [`triage-accepted`](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues?q=is%3Aopen+is%3Aissue+label%3Atriage%2Faccepted+) if you have some experience with ingress-nginx. Note, that it could make sense to grab issues with higher priority first.
 
 ## Contributing a Patch
 
@@ -36,13 +36,13 @@ All changes must be code reviewed. Coding conventions and standards are explaine
 
 Ingress Nginx collaborators may add "/lgtm" (Looks Good To Me) to indicate that a PR is acceptable. Any change requires at least one LGTM.  No pull requests can be merged until at least one Ingress Nginx collaborator signs off with an LGTM. Adding the "/lgtm" comment result in the prow bot adding the `lgtm` label. Note that a pull request still needs an `approve` label from one of the owners.
 
-Reviewers or members who want to become reviewers according to the [k8s membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md), could actively search for [pull requests that need a review](https://github.com/kubernetes/ingress-nginx/pulls?q=is%3Aopen+is%3Apr+label%3Atriage%2Faccepted).
+Reviewers or members who want to become reviewers according to the [k8s membership ladder](https://github.com/kubernetes/community/blob/master/community-membership.md), could actively search for [pull requests that need a review](https://github.com/ideacatlab/infra-nginx-ingress-trial/pulls?q=is%3Aopen+is%3Apr+label%3Atriage%2Faccepted).
 
 ## Support Channels
 
 Whether you are a user or contributor, official support channels include:
 
-- GitHub issues: https://github.com/kubernetes/ingress-nginx/issues/new
+- GitHub issues: https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/new
 - Slack: kubernetes-users room in the [Kubernetes Slack](http://slack.kubernetes.io/)
 - Post: [Kubernetes Forum](https://discuss.kubernetes.io)
 

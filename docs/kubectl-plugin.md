@@ -1,7 +1,7 @@
 <!--
 -----------------NOTICE------------------------
 This file is referenced in code as
-https://github.com/kubernetes/ingress-nginx/blob/main/docs/kubectl-plugin.md
+https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/docs/kubectl-plugin.md
 Do not move it without providing redirects.
 -----------------------------------------------
 -->
@@ -259,20 +259,20 @@ Checking ingresses...
 ✗ anamespace/this-nginx
   - Contains the removed session-cookie-hash annotation.
        Lint added for version 0.24.0
-       https://github.com/kubernetes/ingress-nginx/issues/3743
+       https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/3743
 ✗ othernamespace/ingress-definition-blah
   - The rewrite-target annotation value does not reference a capture group
       Lint added for version 0.22.0
-      https://github.com/kubernetes/ingress-nginx/issues/3174
+      https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/3174
 
 Checking deployments...
 ✗ namespace2/ingress-nginx-controller
   - Uses removed config flag --sort-backends
       Lint added for version 0.22.0
-      https://github.com/kubernetes/ingress-nginx/issues/3655
+      https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/3655
   - Uses removed config flag --enable-dynamic-certificates
       Lint added for version 0.24.0
-      https://github.com/kubernetes/ingress-nginx/issues/3808
+      https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/3808
 ```
 
 To show the lints added **only** for a particular `ingress-nginx` release, use the `--from-version` and `--to-version` flags:
@@ -283,13 +283,13 @@ Checking ingresses...
 ✗ anamespace/this-nginx
   - Contains the removed session-cookie-hash annotation.
        Lint added for version 0.24.0
-       https://github.com/kubernetes/ingress-nginx/issues/3743
+       https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/3743
 
 Checking deployments...
 ✗ namespace2/ingress-nginx-controller
   - Uses removed config flag --enable-dynamic-certificates
       Lint added for version 0.24.0
-      https://github.com/kubernetes/ingress-nginx/issues/3808
+      https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/3808
 ```
 
 ### logs

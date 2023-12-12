@@ -3,7 +3,7 @@
 This document explains how to get started with developing for Ingress-Nginx Controller.
 
 For the really new contributors, who want to contribute to the INGRESS-NGINX project, but need help with understanding some basic concepts,
-that are needed to work with the Kubernetes ingress resource, here is a link to the [New Contributors Guide](https://github.com/kubernetes/ingress-nginx/blob/main/NEW_CONTRIBUTOR.md).
+that are needed to work with the Kubernetes ingress resource, here is a link to the [New Contributors Guide](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/NEW_CONTRIBUTOR.md).
 This guide contains tips on how a http/https request travels, from a browser or a curl command,
 to the webserver process running inside a container, in a pod, in a Kubernetes cluster, but enters the cluster via a ingress resource.
 For those who are familiar with those basic networking concepts like routing of a packet with regards to a
@@ -74,7 +74,7 @@ FOCUS="no-auth-locations" make kind-e2e-test
 !!! note
     The variable `FOCUS` defines Ginkgo [Focused Specs](https://onsi.github.io/ginkgo/#focused-specs)
 
-Valid values are defined in the describe definition of the e2e tests like [Default Backend](https://github.com/kubernetes/ingress-nginx/blob/main/test/e2e/defaultbackend/default_backend.go#L29)
+Valid values are defined in the describe definition of the e2e tests like [Default Backend](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/test/e2e/defaultbackend/default_backend.go#L29)
 
 The complete list of tests can be found [here](../e2e-tests.md)
 

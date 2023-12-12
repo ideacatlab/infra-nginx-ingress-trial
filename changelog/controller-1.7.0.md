@@ -77,4 +77,4 @@ Images:
 * Bump github.com/prometheus/client_golang (#9630)
 * Bump golang.org/x/crypto from 0.5.0 to 0.6.0 (#9609)
 
-**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.6.3...controller-controller-v1.7.0
+**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.6.3...controller-controller-v1.7.0

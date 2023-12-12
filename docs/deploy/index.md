@@ -35,8 +35,8 @@ ingress controller for your particular environment or cloud provider.
 - [Miscellaneous](#miscellaneous)
 
 <!-- TODO: We have subdirectories for kubernetes versions now because of a PR 
-https://github.com/kubernetes/ingress-nginx/pull/8162 . You can see this here 
-https://github.com/kubernetes/ingress-nginx/tree/main/deploy/static/provider/cloud . 
+https://github.com/ideacatlab/infra-nginx-ingress-trial/pull/8162 . You can see this here 
+https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/deploy/static/provider/cloud . 
 We need to add documentation here that is clear and unambiguous in guiding users to pick the deployment manifest 
 under a subdirectory, based on the K8S version being used. But until the explicit clear docs land here, users are 
 free to use those subdirectories and get the manifest(s) related to their K8S version. -->
@@ -132,7 +132,7 @@ kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 
     This documentation assumes that a user has awareness of the DNS and the network routing aspects involved in using ingress.
     The port-forwarding mentioned above, is the easiest way to demo the working of ingress. The "kubectl port-forward..." command above has forwarded the port number 8080, on the localhost's tcp/ip stack, where the command was typed, to the port  number 80, of the service created by the installation of ingress-nginx controller. So now, the traffic sent to port number 8080 on localhost will reach the port number 80, of the ingress-controller's service.
     Port-forwarding is not for a production environment use-case. But here we use port-forwarding, to simulate a HTTP request, originating from outside the cluster, to reach the service of the ingress-nginx controller, that is exposed to receive traffic from outside the cluster.
-  [This issue](https://github.com/kubernetes/ingress-nginx/issues/10014#issuecomment-1567791549described) shows a typical DNS problem and its solution.
+  [This issue](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/10014#issuecomment-1567791549described) shows a typical DNS problem and its solution.
 
 At this point, you can access your deployment using curl ;
 ```console
@@ -333,7 +333,7 @@ More information with regard to Azure annotations for ingress controller can be 
 ```console
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/do/deploy.yaml
 ```
-- By default the service object of the ingress-nginx-controller for Digital-Ocean, only configures one annotation. Its this one `service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"`. While this makes the service functional, it was reported that the Digital-Ocean LoadBalancer graphs shows `no data`, unless a few other annotations are also configured. Some of these other annotations require values that can not be generic and hence not forced in a out-of-the-box installation. These annotations and a discussion on them is well documented in [this issue](https://github.com/kubernetes/ingress-nginx/issues/8965). Please refer to the issue to add annotations, with values specific to user, to get graphs of the DO-LB populated with data.
+- By default the service object of the ingress-nginx-controller for Digital-Ocean, only configures one annotation. Its this one `service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: "true"`. While this makes the service functional, it was reported that the Digital-Ocean LoadBalancer graphs shows `no data`, unless a few other annotations are also configured. Some of these other annotations require values that can not be generic and hence not forced in a out-of-the-box installation. These annotations and a discussion on them is well documented in [this issue](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/8965). Please refer to the issue to add annotations, with values specific to user, to get graphs of the DO-LB populated with data.
 
 
 #### Scaleway

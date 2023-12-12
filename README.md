@@ -2,9 +2,9 @@
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5691/badge)](https://bestpractices.coreinfrastructure.org/projects/5691)
 [![Go Report Card](https://goreportcard.com/badge/github.com/kubernetes/ingress-nginx)](https://goreportcard.com/report/github.com/kubernetes/ingress-nginx)
-[![GitHub license](https://img.shields.io/github/license/kubernetes/ingress-nginx.svg)](https://github.com/kubernetes/ingress-nginx/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/kubernetes/ingress-nginx.svg)](https://github.com/kubernetes/ingress-nginx/stargazers)
-[![GitHub stars](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/kubernetes/ingress-nginx/blob/main/CONTRIBUTING.md)
+[![GitHub license](https://img.shields.io/github/license/kubernetes/ingress-nginx.svg)](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/kubernetes/ingress-nginx.svg)](https://github.com/ideacatlab/infra-nginx-ingress-trial/stargazers)
+[![GitHub stars](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/CONTRIBUTING.md)
 
 
 ## Overview
@@ -21,12 +21,12 @@ See the [Getting Started](https://kubernetes.github.io/ingress-nginx/deploy/) do
 ## Troubleshooting
 
 If you encounter issues, review the [troubleshooting docs](docs/troubleshooting.md),
-[file an issue](https://github.com/kubernetes/ingress-nginx/issues), or talk to us on the
+[file an issue](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues), or talk to us on the
 [#ingress-nginx channel](https://kubernetes.slack.com/messages/ingress-nginx) on the Kubernetes Slack server.
 
 ## Changelog
 
-See [the list of releases](https://github.com/kubernetes/ingress-nginx/releases) for all changes.
+See [the list of releases](https://github.com/ideacatlab/infra-nginx-ingress-trial/releases) for all changes.
 For detailed changes for each release, please check the [changelog-$version.md](./changelog) file for the release version.
 For detailed changes on the `ingress-nginx` helm chart, please check the changelog folder for a specific version
 [CHANGELOG-$current-version.md](./charts/ingress-nginx/changelog) file.
@@ -70,14 +70,14 @@ Thanks for taking the time to join our community and start contributing!
     expect, and instructions on the developer certificate of origin that we require.
   - Join our Kubernetes Slack channel for developer discussion : [#ingress-nginx-dev](https://kubernetes.slack.com/archives/C021E147ZA4).
   - Submit GitHub issues for any feature enhancements, bugs, or documentation problems.
-    - Please make sure to read the [Issue Reporting Checklist](https://github.com/kubernetes/ingress-nginx/blob/main/CONTRIBUTING.md#issue-reporting-guidelines) before opening an issue. Issues not conforming to the guidelines **may be closed immediately**.
+    - Please make sure to read the [Issue Reporting Checklist](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/CONTRIBUTING.md#issue-reporting-guidelines) before opening an issue. Issues not conforming to the guidelines **may be closed immediately**.
   - Join our [ingress-nginx-dev mailing list](https://groups.google.com/a/kubernetes.io/g/ingress-nginx-dev/c/ebbBMo-zX-w)
 
 - **Support**:
   - Join the [#ingress-nginx-users](https://kubernetes.slack.com/messages/CANQGM8BA/) channel inside the [Kubernetes Slack](http://slack.kubernetes.io/) to ask questions or get support from the maintainers and other users.
-  - The [GitHub issues](https://github.com/kubernetes/ingress-nginx/issues) in the repository are **exclusively** for bug reports and feature requests.
+  - The [GitHub issues](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues) in the repository are **exclusively** for bug reports and feature requests.
   - **Discuss**: Tweet using the `#IngressNginx` hashtag or sharing with us [@IngressNginx](https://twitter.com/IngressNGINX).
 
 ## License
 
-[Apache License 2.0](https://github.com/kubernetes/ingress-nginx/blob/main/LICENSE)
+[Apache License 2.0](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/LICENSE)

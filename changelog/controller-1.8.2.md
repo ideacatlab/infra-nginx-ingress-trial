@@ -16,4 +16,4 @@ Images:
 * [release-1.8] Update images tags after adding git data in gcloud (#10233)
 * [release-1.8] Golang 1.20.6 for test runner (#10231)
 
-**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.8.1...controller-controller-v1.8.2
+**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.8.1...controller-controller-v1.8.2
