@@ -127,7 +127,8 @@ controller:
   # -- For backwards compatibility with ingress.class annotation, use ingressClass.
   # Algorithm is as follows, first ingressClassName is considered, if not present, controller looks for ingress.class annotation
   ingressClass: nginx
-  # -- Labels to add to the pod container metadata
+  # -- Labels to add to the pod container metadata  service:
+
   podLabels: {}
   #  key: value
 
@@ -151,12 +152,15 @@ controller:
     # -- Allows overriding of the publish service to bind to
     # Must be <namespace>/<service_name>
     pathOverride: ""
+    
   # Limit the scope of the controller to a specific namespace
   scope:
     # -- Enable 'scope' or not
-    enabled: false
+    enabled: true
     # -- Namespace to limit the controller to; defaults to $(POD_NAMESPACE)
-    namespace: ""
+    namespace: "default"
+    class: "nginx"
+    annotation: "nginx-trial"
     # -- When scope.enabled == false, instead of watching all namespaces, we watching namespaces whose labels
     # only match with namespaceSelector. Format like foo=bar. Defaults to empty, means watching all namespaces.
     namespaceSelector: ""
@@ -600,7 +604,8 @@ controller:
       ipFamilies:
         - IPv4
 
-      ports: {}
+      ports:
+        {}
         # -- Port the internal HTTP listener is published with.
         # Defaults to the value of `controller.service.ports.http`.
         # http: 80
@@ -608,7 +613,8 @@ controller:
         # Defaults to the value of `controller.service.ports.https`.
         # https: 443
 
-      targetPorts: {}
+      targetPorts:
+        {}
         # -- Port of the ingress controller the internal HTTP listener is mapped to.
         # Defaults to the value of `controller.service.targetPorts.http`.
         # http: http
@@ -728,7 +734,7 @@ controller:
         type: RuntimeDefault
       capabilities:
         drop:
-        - ALL
+          - ALL
       readOnlyRootFilesystem: true
     resources: {}
   admissionWebhooks:
@@ -779,7 +785,7 @@ controller:
           type: RuntimeDefault
         capabilities:
           drop:
-          - ALL
+            - ALL
         readOnlyRootFilesystem: true
       resources: {}
       # limits:
@@ -799,7 +805,7 @@ controller:
           type: RuntimeDefault
         capabilities:
           drop:
-          - ALL
+            - ALL
         readOnlyRootFilesystem: true
       resources: {}
     patch:
@@ -1040,7 +1046,8 @@ defaultBackend:
   ## Additional volumes to the default backend pod.
   #  - name: copy-portal-skins
   #    emptyDir: {}
-  extraConfigMaps: []
+  extraConfigMaps:
+    []
     ## Additional configmaps to the default backend pod.
     # Example ConfigMap, uncomment and configure as needed
     # - name: my-extra-configmap-1
