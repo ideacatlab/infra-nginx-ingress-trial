@@ -2,41 +2,55 @@
 
 aliases:
   sig-network-leads:
-  - caseydavenport
-  - dcbw
-  - thockin
+    - caseydavenport
+    - dcbw
+    - thockin
+    - ideacatlab
+    - razvanrun
 
   ingress-nginx-admins:
-  - rikatz
-  - strongjz
+    - rikatz
+    - strongjz
+    - ideacatlab
+    - razvanrun
 
   ingress-nginx-maintainers:
-  - rikatz
-  - strongjz
-  - cpanato
-  - puerco
-  - tao12345666333
+    - rikatz
+    - strongjz
+    - cpanato
+    - puerco
+    - tao12345666333
+    - ideacatlab
+    - razvanrun
 
   ingress-nginx-reviewers:
-  - rikatz
-  - strongjz
-  - puerco
-  - cpanato
-  - tao12345666333
+    - rikatz
+    - strongjz
+    - puerco
+    - cpanato
+    - tao12345666333
+    - ideacatlab
+    - razvanrun
 
   ingress-nginx-helm-maintainers:
-  - cpanato
-  - Gacko
-  - strongjz
+    - cpanato
+    - Gacko
+    - strongjz
 
   ingress-nginx-helm-reviewers:
-  - cpanato
-  - Gacko
-  - strongjz
+    - cpanato
+    - Gacko
+    - strongjz
+    - ideacatlab
+    - razvanrun
 
   ingress-nginx-docs-maintainers:
-  - longwuyuan
-  - tao12345666333
+    - longwuyuan
+    - tao12345666333
+    - ideacatlab
+    - razvanrun
 
   ingress-nginx-kube-webhook-certgen-reviewers:
-  - invidian
+    - invidian
+    - ideacatlab
+    - razvanrun

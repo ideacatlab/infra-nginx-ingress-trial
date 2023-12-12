@@ -53,7 +53,7 @@ ifneq ($(PLATFORM),)
 	PLATFORM_FLAG="--platform"
 endif
 
-REGISTRY ?= gcr.io/k8s-staging-ingress-nginx
+REGISTRY ?= razvanrun/infra-nginx-ingress-trial
 
 BASE_IMAGE ?= $(shell cat NGINX_BASE)
 
