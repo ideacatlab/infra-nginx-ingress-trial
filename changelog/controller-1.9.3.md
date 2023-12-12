@@ -26,4 +26,4 @@ Images:
 * Bump ossf/scorecard-action from 2.2.0 to 2.3.0 (#10487)
 * Bump golang.org/x/crypto from 0.13.0 to 0.14.0 (#10485)
 
-**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.9.1...controller-controller-v1.9.3
+**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.9.1...controller-controller-v1.9.3

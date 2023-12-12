@@ -116,12 +116,12 @@ Promoting the images basically means that images, that were pushed to staging co
 
 - You need update the testrunner-image-sha in the following files :
 
-    - [run-in-docker.sh](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/build/run-in-docker.sh#L41)
-    - [Makefile](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/test/e2e-image/Makefile#L3)
+    - [run-in-docker.sh](https://github.com/kubernetes/ingress-nginx/blob/main/build/run-in-docker.sh#L41)
+    - [Makefile](https://github.com/kubernetes/ingress-nginx/blob/main/test/e2e-image/Makefile#L3)
 
 ### c. Create PR
 
-- Look at this PR for how it was done before [example PR](https://github.com/ideacatlab/infra-nginx-ingress-trial/pull/9444)
+- Look at this PR for how it was done before [example PR](https://github.com/kubernetes/ingress-nginx/pull/9444)
 - Create a PR
 
 ### d. Merge

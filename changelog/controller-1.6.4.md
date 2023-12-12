@@ -135,4 +135,4 @@ Images:
 * Bump actions/dependency-review-action from 2.5.1 to 3.0.0 (#9301)
 * Bump k8s.io/component-base from 0.25.3 to 0.25.4 (#9300)
 
-**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.5.1...controller-controller-v1.6.4
+**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.5.1...controller-controller-v1.6.4

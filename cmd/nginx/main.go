@@ -212,7 +212,7 @@ func createApiserverClient(apiserverHost, rootCAFile, kubeConfig string) (*kuber
 	var v *discovery.Info
 
 	// The client may fail to connect to the API server in the first request.
-	// https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/1968
+	// https://github.com/kubernetes/ingress-nginx/issues/1968
 	defaultRetry := wait.Backoff{
 		Steps:    10,
 		Duration: 1 * time.Second,

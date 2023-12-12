@@ -66,4 +66,4 @@ Images:
 * Bump github.com/stretchr/testify from 1.8.3 to 1.8.4 (#10041)
 * Bump github.com/stretchr/testify from 1.8.2 to 1.8.3 (#10005)
 
-**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.8.0...controller-controller-v1.8.1
+**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.8.0...controller-controller-v1.8.1

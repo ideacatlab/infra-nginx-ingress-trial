@@ -188,7 +188,7 @@ func checkAnnotation(name string, ing *networking.Ingress, fields AnnotationFiel
 	if fields != nil {
 		config, ok := fields[name]
 		if !ok {
-			return "", fmt.Errorf("annotation does not contain a valid internal configuration, this is an Ingress Controller issue! Please raise an issue on github.com/ideacatlab/infra-nginx-ingress-trial")
+			return "", fmt.Errorf("annotation does not contain a valid internal configuration, this is an Ingress Controller issue! Please raise an issue on github.com/kubernetes/ingress-nginx")
 		}
 		validateFunc = config.Validator
 	}

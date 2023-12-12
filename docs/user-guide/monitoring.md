@@ -81,7 +81,7 @@ This tutorial will show you how to install [Prometheus](https://prometheus.io/) 
 
 ### Deploy and configure Prometheus Server
 
-Note that the kustomize bases used in this tutorial are stored in the [deploy](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/deploy) folder of the GitHub repository [kubernetes/ingress-nginx](https://github.com/ideacatlab/infra-nginx-ingress-trial).
+Note that the kustomize bases used in this tutorial are stored in the [deploy](https://github.com/kubernetes/ingress-nginx/tree/main/deploy) folder of the GitHub repository [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx).
 
 - The Prometheus server must be configured so that it can discover endpoints of services. If a Prometheus server is already running in the cluster and if it is configured in a way that it can find the ingress controller pods, no extra configuration is needed.
 
@@ -144,7 +144,7 @@ According to the above example, this URL will be http://10.192.0.3:31086
 
   The username and password is `admin`
 
-  - After the login you can import the Grafana dashboard from [official dashboards](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/deploy/grafana/dashboards), by following steps given below :
+  - After the login you can import the Grafana dashboard from [official dashboards](https://github.com/kubernetes/ingress-nginx/tree/main/deploy/grafana/dashboards), by following steps given below :
 
     - Navigate to lefthand panel of grafana
     - Hover on the gearwheel icon for Configuration and click "Data Sources"
@@ -331,7 +331,7 @@ This document assumes you're using helm and using the kube-prometheus-stack pack
   ```
 - Open your browser and visit the following URL http://localhost:{port-forwarded-port} according to the above example it would be, http://localhost:3000
   The default username/ password is admin/prom-operator
-- After the login you can import the Grafana dashboard from [official dashboards](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/deploy/grafana/dashboards), by following steps given below :
+- After the login you can import the Grafana dashboard from [official dashboards](https://github.com/kubernetes/ingress-nginx/tree/main/deploy/grafana/dashboards), by following steps given below :
 
   - Navigate to lefthand panel of grafana
   - Hover on the gearwheel icon for Configuration and click "Data Sources"

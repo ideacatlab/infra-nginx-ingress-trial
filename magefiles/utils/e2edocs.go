@@ -45,7 +45,7 @@ var (
 const (
 	testDir  = "test/e2e"
 	describe = "Describe"
-	URL      = "https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/"
+	URL      = "https://github.com/kubernetes/ingress-nginx/tree/main/"
 )
 
 var (

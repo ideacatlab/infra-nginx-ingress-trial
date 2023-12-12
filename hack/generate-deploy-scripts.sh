@@ -43,9 +43,9 @@ do
 
   mkdir -p ${OUTPUT_DIR}
   cd ${TARGET_DIR}
-  helm template infra-nginx-ingress-trial ${DIR}/charts/infra-nginx-ingress-trial \
+  helm template ingress-nginx ${DIR}/charts/ingress-nginx \
     --values values.yaml \
-    --namespace infra-nginx-ingress-trial \
+    --namespace ingress-nginx \
     --kube-version ${K8S_VERSION} \
     > $MANIFEST
   sed -i.bak '/app.kubernetes.io\/managed-by: Helm/d' $MANIFEST

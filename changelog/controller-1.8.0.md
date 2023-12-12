@@ -61,4 +61,4 @@ on our new [ingress-nginx-dev mailing list](https://groups.google.com/a/kubernet
 * Bump github.com/prometheus/client_model from 0.3.0 to 0.4.0 (#9937)
 * Bump google.golang.org/grpc from 1.54.0 to 1.55.0 (#9936)
 
-**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.7.1...controller-controller-v1.8.0
+**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.7.1...controller-controller-v1.8.0

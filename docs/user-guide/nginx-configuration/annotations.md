@@ -318,7 +318,7 @@ nginx.ingress.kubernetes.io/configuration-snippet: |
 ```
 
 !!! attention
-Since version 1.9.0, `"configuration-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/7837) for more information.
+Since version 1.9.0, `"configuration-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/kubernetes/ingress-nginx/issues/7837) for more information.
 
 ### Custom HTTP Errors
 
@@ -442,7 +442,7 @@ metadata:
 ```
 
 !!! attention
-Since version 1.9.0, `"server-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/7837) for more information.
+Since version 1.9.0, `"server-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/kubernetes/ingress-nginx/issues/7837) for more information.
 
 !!! attention
     This annotation can be used only once per host.
@@ -522,7 +522,7 @@ nginx.ingress.kubernetes.io/auth-snippet: |
 > Note: `nginx.ingress.kubernetes.io/auth-snippet` is an optional annotation. However, it may only be used in conjunction with `nginx.ingress.kubernetes.io/auth-url` and will be ignored if `nginx.ingress.kubernetes.io/auth-url` is not set
 
 !!! attention
-Since version 1.9.0, `"auth-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/7837) for more information.
+Since version 1.9.0, `"auth-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/kubernetes/ingress-nginx/issues/7837) for more information.
 
 !!! example
     Please check the [external-auth](../../examples/auth/external-auth/README.md) example.
@@ -625,7 +625,7 @@ By default the Ingress-Nginx Controller uses a list of all endpoints (Pod IP/por
 
 The `nginx.ingress.kubernetes.io/service-upstream` annotation disables that behavior and instead uses a single upstream in NGINX, the service's Cluster IP and port.
 
-This can be desirable for things like zero-downtime deployments . See issue [#257](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/257).
+This can be desirable for things like zero-downtime deployments . See issue [#257](https://github.com/kubernetes/ingress-nginx/issues/257).
 
 #### Known Issues
 
@@ -915,7 +915,7 @@ Include /etc/nginx/owasp-modsecurity-crs/nginx-modsecurity.conf
 ```
 
 !!! attention
-Since version 1.9.0, `"modsecurity-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/7837) for more information.
+Since version 1.9.0, `"modsecurity-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/kubernetes/ingress-nginx/issues/7837) for more information.
 
 ### Backend Protocol
 
@@ -1008,4 +1008,4 @@ metadata:
 ```
 
 !!! attention
-Since version 1.9.0, `"stream-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/7837) for more information.
+Since version 1.9.0, `"stream-snippet"` annotation is disabled by default and has to be explicitly enabled, see [allow-snippet-annotations](./configmap.md#allow-snippet-annotations). Enabling it can be dangerous in multi-tenant clusters, as it can lead to people with otherwise limited permissions being able to retrieve all secrets on the cluster. See CVE-2021-25742 and the [related issue on github](https://github.com/kubernetes/ingress-nginx/issues/7837) for more information.

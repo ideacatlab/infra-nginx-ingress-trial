@@ -18,7 +18,7 @@ This README will evolve as the development of testing occurs.
 ## DESCRIPTION
  
 ### What
-- An issue was created for performance tests, for the ingress-nginx-controller builds, https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/8033 .
+- An issue was created for performance tests, for the ingress-nginx-controller builds, https://github.com/kubernetes/ingress-nginx/issues/8033 .
 
 ### How
 - A step by step guide to using https://k6.io with GithubActions is here https://k6.io/blog/load-testing-using-github-actions/

@@ -23,7 +23,7 @@ import (
 	"k8s.io/ingress-nginx/internal/ingress/resolver"
 )
 
-// LB Alghorithms are defined in https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/d3e75b056f77be54e01bdb18675f1bb46caece31/rootfs/etc/nginx/lua/balancer.lua#L28
+// LB Alghorithms are defined in https://github.com/kubernetes/ingress-nginx/blob/d3e75b056f77be54e01bdb18675f1bb46caece31/rootfs/etc/nginx/lua/balancer.lua#L28
 
 const (
 	loadBalanceAlghoritmAnnotation = "load-balance"

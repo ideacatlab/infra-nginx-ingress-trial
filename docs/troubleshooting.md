@@ -1,7 +1,7 @@
 <!--
 -----------------NOTICE------------------------
 This file is referenced in code as
-https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/docs/troubleshooting.md
+https://github.com/kubernetes/ingress-nginx/blob/main/docs/troubleshooting.md
 Do not move it without providing redirects.
 -----------------------------------------------
 -->
@@ -53,7 +53,7 @@ $ kubectl logs -n <namespace> ingress-nginx-controller-67956bf89d-fv58j
 NGINX Ingress controller
   Release:    0.14.0
   Build:      git-734361d
-  Repository: https://github.com/ideacatlab/infra-nginx-ingress-trial
+  Repository: https://github.com/kubernetes/ingress-nginx
 -------------------------------------------------------------------------------
 ....
 ```

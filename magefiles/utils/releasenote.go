@@ -58,14 +58,14 @@ func (r ReleaseNote) Template() {
 
 func (r ReleaseNote) HelmTemplate() {
 	// Files are provided as a slice of strings.
-	changelogTemplate, err := os.ReadFile("charts/infra-nginx-ingress-trial/changelog/helm-chart.md.gotmpl")
+	changelogTemplate, err := os.ReadFile("charts/ingress-nginx/changelog/helm-chart.md.gotmpl")
 	if err != nil {
 		ErrorF("Could not read changelog template file %s", err)
 	}
 	Debug("ChangeLog Templates %s", string(changelogTemplate))
 	t := template.Must(template.New("changelog").Parse(string(changelogTemplate)))
 	// create a new file
-	file, err := os.Create(fmt.Sprintf("charts/infra-nginx-ingress-trial/changelog/helm-chart-%s.md", r.NewHelmChartVersion))
+	file, err := os.Create(fmt.Sprintf("charts/ingress-nginx/changelog/helm-chart-%s.md", r.NewHelmChartVersion))
 	if err != nil {
 		ErrorF("Could not create changelog file %s", err)
 	}

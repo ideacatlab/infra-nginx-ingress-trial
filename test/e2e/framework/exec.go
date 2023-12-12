@@ -163,7 +163,7 @@ func (f *Framework) KubectlProxy(port int) (int, *exec.Cmd, error) {
 
 func (f *Framework) UninstallChart() error {
 	//nolint:gosec //Ignore G204 error
-	cmd := exec.Command("helm", "uninstall", "--namespace", f.Namespace, "infra-nginx-ingress-trial")
+	cmd := exec.Command("helm", "uninstall", "--namespace", f.Namespace, "nginx-ingress")
 	_, err := cmd.CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("unexpected error uninstalling ingress-nginx release: %v", err)

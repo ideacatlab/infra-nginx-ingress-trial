@@ -46,7 +46,7 @@ func (s *EndpointSliceLister) MatchByKey(key string) ([]*discoveryv1.EndpointSli
 			continue
 		}
 		// generated endpointslices names has truncated svc name as prefix when svc name is too long, we compare only non truncated part
-		// https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/9240
+		// https://github.com/kubernetes/ingress-nginx/issues/9240
 		if len(key) >= (apiNames.MaxGeneratedNameLength+keyNsLen) && !strings.HasPrefix(listKey, key[:apiNames.MaxGeneratedNameLength+keyNsLen-1]) {
 			continue
 		}

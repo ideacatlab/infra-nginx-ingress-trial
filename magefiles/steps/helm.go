@@ -33,8 +33,8 @@ import (
 )
 
 const (
-	HelmChartPath   = "charts/infra-nginx-ingress-trial/Chart.yaml"
-	HelmChartValues = "charts/infra-nginx-ingress-trial/values.yaml"
+	HelmChartPath   = "charts/ingress-nginx/Chart.yaml"
+	HelmChartValues = "charts/ingress-nginx/values.yaml"
 )
 
 type Helm mg.Namespace

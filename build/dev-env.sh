@@ -66,7 +66,7 @@ docker tag "${REGISTRY}/controller:${TAG}" "${DEV_IMAGE}"
 
 export K8S_VERSION=${K8S_VERSION:-v1.26.3@sha256:61b92f38dff6ccc29969e7aa154d34e38b89443af1a2c14e6cfbd2df6419c66f}
 
-KIND_CLUSTER_NAME="infra-nginx-ingress-trial-dev"
+KIND_CLUSTER_NAME="ingress-nginx-dev"
 
 if ! kind get clusters -q | grep -q ${KIND_CLUSTER_NAME}; then
   echo "[dev-env] creating Kubernetes cluster with kind"
@@ -79,9 +79,9 @@ echo "[dev-env] copying docker images to cluster..."
 kind load docker-image --name="${KIND_CLUSTER_NAME}" "${DEV_IMAGE}"
 
 echo "[dev-env] deploying NGINX Ingress controller..."
-kubectl create namespace infra-nginx-ingress-trial &> /dev/null || true
+kubectl create namespace ingress-nginx &> /dev/null || true
 
-cat << EOF | helm template infra-nginx-ingress-trial ${DIR}/../charts/infra-nginx-ingress-trial --namespace=infra-nginx-ingress-trial --values - | kubectl apply -n infra-nginx-ingress-trial -f -
+cat << EOF | helm template ingress-nginx ${DIR}/../charts/ingress-nginx --namespace=ingress-nginx --values - | kubectl apply -n ingress-nginx -f -
 controller:
   image:
     repository: ${REGISTRY}/controller
@@ -104,8 +104,8 @@ EOF
 
 cat <<EOF
 
-Kubernetes cluster ready and infra-nginx-ingress-trial listening in localhost using ports 80 and 443
+Kubernetes cluster ready and ingress-nginx listening in localhost using ports 80 and 443
 
-To delete the dev cluster execute: 'kind delete cluster --name infra-nginx-ingress-trial-dev'
+To delete the dev cluster execute: 'kind delete cluster --name ingress-nginx-dev'
 
 EOF

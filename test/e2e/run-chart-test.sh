@@ -36,7 +36,7 @@ cleanup() {
 
 trap cleanup EXIT
 
-export KIND_CLUSTER_NAME=${KIND_CLUSTER_NAME:-infra-nginx-ingress-trial-dev}
+export KIND_CLUSTER_NAME=${KIND_CLUSTER_NAME:-ingress-nginx-dev}
 
 if ! command -v kind --version &> /dev/null; then
   echo "kind is not installed. Use the package manager or visit the official site https://kind.sigs.k8s.io/"
@@ -112,5 +112,5 @@ docker run --rm --interactive --network host \
     --volume "${DIR}/../../":/workdir \
     --workdir /workdir \
     aledbf/chart-testing:v3.3.1-next ct install \
-        --charts charts/infra-nginx-ingress-trial \
+        --charts charts/ingress-nginx \
         --helm-extra-args "--timeout 60s"

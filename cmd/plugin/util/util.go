@@ -35,7 +35,7 @@ const (
 )
 
 // IssuePrefix is the github url that we can append an issue number to to link to it
-const IssuePrefix = "https://github.com/ideacatlab/infra-nginx-ingress-trial/issues/"
+const IssuePrefix = "https://github.com/kubernetes/ingress-nginx/issues/"
 
 var versionRegex = regexp.MustCompile(`(\d)+\.(\d)+\.(\d)+.*`)
 

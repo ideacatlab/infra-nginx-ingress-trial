@@ -18,4 +18,4 @@ Images:
 
 * Bump google.golang.org/grpc from 1.58.0 to 1.58.1 (#10436)
 
-**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-controller-v1.9.0...controller-controller-v1.9.1
+**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-controller-v1.9.0...controller-controller-v1.9.1

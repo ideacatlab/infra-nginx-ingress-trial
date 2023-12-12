@@ -14,7 +14,7 @@
 
 - Open a Pull Request for your changes considering the following steps to fire cloudbuild of a new image for the Ingress-Nginx-Controller:
 
-  - In case of rare CVE fix or other reason to rebuild the nginx-base-image itself, look at the /images directory  [NGINX Base Image](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/nginx).
+  - In case of rare CVE fix or other reason to rebuild the nginx-base-image itself, look at the /images directory  [NGINX Base Image](https://github.com/kubernetes/ingress-nginx/tree/main/images/nginx).
 
   - Example [NGINX_VERSION](images/nginx/rootfs/build.sh#L21), [SHA256](images/nginx/rootfs/build.sh#L124).
 
@@ -43,24 +43,24 @@
 
 - Sometimes, you may also be needing to rebuild, images for one or multiple other related components of the Ingress-Nginx-Controller ecosystem. Make changes to the required files in the /images directory, if/as applicable, in the context of the release you are attempting.  :
 
-  - [e2e](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/test/e2e-image)
+  - [e2e](https://github.com/kubernetes/ingress-nginx/tree/main/test/e2e-image)
 
     - Update references to e2e-test-runner image [If applicable] :
 
-      - [e2e-image](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/test/e2e-image/Dockerfile#L1)
-      - [run-in-docker.sh](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/build/run-in-docker.sh#L37)
+      - [e2e-image](https://github.com/kubernetes/ingress-nginx/blob/main/test/e2e-image/Dockerfile#L1)
+      - [run-in-docker.sh](https://github.com/kubernetes/ingress-nginx/blob/main/build/run-in-docker.sh#L37)
 
-  - [test-runner](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/test-runner)
+  - [test-runner](https://github.com/kubernetes/ingress-nginx/tree/main/images/test-runner)
 
-  - [echo](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/echo)
+  - [echo](https://github.com/kubernetes/ingress-nginx/tree/main/images/echo)
 
-  - [cfssl](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/cfssl)
+  - [cfssl](https://github.com/kubernetes/ingress-nginx/tree/main/images/cfssl)
 
-  - [fastcgi-helloserver](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/fastcgi-helloserver)
+  - [fastcgi-helloserver](https://github.com/kubernetes/ingress-nginx/tree/main/images/fastcgi-helloserver)
 
-  - [httpbin](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/httpbin)
+  - [httpbin](https://github.com/kubernetes/ingress-nginx/tree/main/images/httpbin)
 
-  - [kube-webhook-certgen](https://github.com/ideacatlab/infra-nginx-ingress-trial/tree/main/images/kube-webhook-certgen)
+  - [kube-webhook-certgen](https://github.com/kubernetes/ingress-nginx/tree/main/images/kube-webhook-certgen)
 
 ### c. Create PR
 
@@ -157,10 +157,10 @@ Promoting the images basically means that images, that were pushed to staging co
 - Prefer to edit only and only in your branch, in your Fork
 
 ### b. Edit the semver tag
-  - [TAG](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/TAG#L1)
+  - [TAG](https://github.com/kubernetes/ingress-nginx/blob/main/TAG#L1)
 
 ### c. Edit the helm Chart
-  - Change the below-mentioned [Fields in Chart.yaml](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/charts/ingress-nginx/Chart.yaml)
+  - Change the below-mentioned [Fields in Chart.yaml](https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/Chart.yaml)
     - version
     - appVersion
     - kubeVersion (**ONLY if applicable**)
@@ -201,7 +201,7 @@ Promoting the images basically means that images, that were pushed to staging co
             while read -r line; do
               pr_num=`echo "$line" | cut -f1`
               pr_title=`echo "$line" | cut -f2`
-              echo "[$pr_num](https://github.com/ideacatlab/infra-nginx-ingress-trial/pull/$pr_num) $pr_title"
+              echo "[$pr_num](https://github.com/kubernetes/ingress-nginx/pull/$pr_num) $pr_title"
             done <$file
 
             ```
@@ -215,7 +215,7 @@ Promoting the images basically means that images, that were pushed to staging co
             while read -r line; do
               pr_num=`echo "$line" | cut -f1`
               pr_title=`echo "$line" | cut -f2`
-              echo \""[$pr_num](https://github.com/ideacatlab/infra-nginx-ingress-trial/pull/$pr_num) $pr_title"\"
+              echo \""[$pr_num](https://github.com/kubernetes/ingress-nginx/pull/$pr_num) $pr_title"\"
             done <$file
 
             ```
@@ -226,7 +226,7 @@ Promoting the images basically means that images, that were pushed to staging co
           ```
 
 ### d. Edit the values.yaml and run helm-docs
-  - [Fields to edit in values.yaml](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/charts/ingress-nginx/values.yaml)
+  - [Fields to edit in values.yaml](https://github.com/kubernetes/ingress-nginx/blob/main/charts/ingress-nginx/values.yaml)
 
     - tag
     - digest
@@ -246,7 +246,7 @@ Promoting the images basically means that images, that were pushed to staging co
 
   - This script depends on kustomize and helm. The versions are pinned in `hack/.tool-versions` and you can use [asdf](https://github.com/asdf-vm/asdf#asdf) to install them
 
-  - Execute the script to update static manifests using that script [hack/generate-deploy-scripts.sh](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/hack/generate-deploy-scripts.sh)
+  - Execute the script to update static manifests using that script [hack/generate-deploy-scripts.sh](https://github.com/kubernetes/ingress-nginx/blob/main/hack/generate-deploy-scripts.sh)
   - Open some of the manifests and check if the script worked properly
 
   - Use `grep -ir image: | less` on the deploy directory, to view for any misses by the script on image digest value or other undesired changes. The script should properly set the image and the digest fields to the desired tag and semver
@@ -254,7 +254,7 @@ Promoting the images basically means that images, that were pushed to staging co
 
 ### f. Edit the changelog
 
-  [Changelog.md](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/Changelog.md)
+  [Changelog.md](https://github.com/kubernetes/ingress-nginx/blob/main/Changelog.md)
 - Each time a release is made, a new section is added to the Changelog.md file
 - A new section in the Changelog.md file consists of 3 components listed below
   - the "Image"
@@ -270,7 +270,7 @@ Promoting the images basically means that images, that were pushed to staging co
 
 - Update the version in [docs/deploy/index.md](docs/deploy/index.md)
 - Update Supported versions in the Support Versions table in the README.md
-- Execute the script to update e2e docs [hack/generate-e2e-suite-doc.sh](https://github.com/ideacatlab/infra-nginx-ingress-trial/blob/main/hack/generate-e2e-suite-doc.sh)
+- Execute the script to update e2e docs [hack/generate-e2e-suite-doc.sh](https://github.com/kubernetes/ingress-nginx/blob/main/hack/generate-e2e-suite-doc.sh)
 
 ### h. Update README.md
 
@@ -281,7 +281,7 @@ Promoting the images basically means that images, that were pushed to staging co
 ### a. Create PR
 
 - Open PR for releasing the new version of the Ingress-Nginx-Controller ;
-  - Look at this PR for how it was done before [example PR](https://github.com/ideacatlab/infra-nginx-ingress-trial/pull/7490)
+  - Look at this PR for how it was done before [example PR](https://github.com/kubernetes/ingress-nginx/pull/7490)
   - Create a PR
 
 ### b. Merge

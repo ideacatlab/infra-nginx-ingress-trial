@@ -92,4 +92,4 @@ Images:
 * Bump docker/setup-buildx-action from 2.8.0 to 2.9.0 (#10191)
 * Bump docker/setup-buildx-action from 2.7.0 to 2.8.0 (#10165)
 
-**Full Changelog**: https://github.com/ideacatlab/infra-nginx-ingress-trial/compare/controller-release-1.8...controller-controller-v1.9.0-beta.0
+**Full Changelog**: https://github.com/kubernetes/ingress-nginx/compare/controller-release-1.8...controller-controller-v1.9.0-beta.0
